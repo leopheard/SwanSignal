@@ -17,14 +17,14 @@ def get_playable_podcast1(soup1):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://image.simplecastcdn.com/images/0cb5ca85-da11-4b94-9f5e-381719ff4f48/776e1e7d-8130-4373-a1ed-b62fac052cf5/3000x3000/swansignalpodcastcoverat2x.jpg?aid=rss_feed",
         }
         subjects.append(item)
     return subjects
@@ -48,14 +48,14 @@ def get_playable_podcast(soup1):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://image.simplecastcdn.com/images/0cb5ca85-da11-4b94-9f5e-381719ff4f48/776e1e7d-8130-4373-a1ed-b62fac052cf5/3000x3000/swansignalpodcastcoverat2x.jpg?aid=rss_feed",
         }
         subjects.append(item)
     return subjects
